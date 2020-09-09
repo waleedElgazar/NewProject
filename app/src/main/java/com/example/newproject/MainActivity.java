@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 20; i++) {
             Date date=new Date();
             String x=date.toString();
-            Note note=new Note("waleed "+i,x);
+            Note note=new Note("waleed "+i,x,"xyz");
             models.add(note);
         }
         MyAdapter =new MyAdapter(models);

@@ -28,9 +28,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Adapterr> {
     @Override
     public void onBindViewHolder(@NonNull Adapterr holder, int position) {
         final Note model=list.get(position);
-        holder.txt2.setText(model.getId()+"\n"+model.getBody());
-        holder.txt1.setText(model.getDate());
-
+        holder.txt1.setText(model.getType());
+        holder.txt2.setText(model.getDate());
+        holder.txt3.setText(model.getBody());
     }
 
     @Override
@@ -39,11 +39,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Adapterr> {
     }
 
     public class Adapterr extends RecyclerView.ViewHolder {
-        TextView txt1,txt2;
+        TextView txt1,txt2,txt3;
         public Adapterr(@NonNull View itemView) {
             super(itemView);
-            txt1=itemView.findViewById(R.id.name);
-            txt2=itemView.findViewById(R.id.phone);
+            txt1=itemView.findViewById(R.id.type);
+            txt2=itemView.findViewById(R.id.date);
+            txt3=itemView.findViewById(R.id.body);
         }
     }
 }

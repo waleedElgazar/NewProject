@@ -11,10 +11,12 @@ class Note {
     private int id;
     private String body;
     private String date;
+    private String type;
 
-    public Note(String body, String date) {
+    public Note(String body, String date, String type) {
         this.body = body;
         this.date = date;
+        this.type=type;
     }
 
     public void setId(int id) {
@@ -29,9 +31,12 @@ class Note {
         return body;
     }
 
-
     public String getDate() {
         return date;
+    }
+
+    public String getType() {
+        return type;
     }
 
 }
