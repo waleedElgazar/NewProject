@@ -3,6 +3,7 @@ package com.example.newproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -25,5 +26,11 @@ public class newNote extends AppCompatActivity {
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,arr);
         auto.setThreshold(1);
         auto.setAdapter(adapter);
+    }
+    public void saveNote(View v){
+        String type, time,body;
+        type=auto.getText().toString();
+        body=text.getText().toString();
+
     }
 }
